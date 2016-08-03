@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true
+  },
+  "filesGlob": [
+    "**/*.ts",
+    "!node_modules/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "typings/global",
+    "typings/global.d.ts"
+  ],
+  "compileOnSave": false,
+  "atom": {
+    "rewriteTsconfig": false
+  },
+  "files": [
+    "typings/globals/es6-shim/index.d.ts",
+    "typings/index.d.ts",
+    "app/app.ts",
+    "app/pages/about/about.ts",
+    "app/pages/contact/contact.spec.ts",
+    "app/pages/contact/contact.ts",
+    "app/pages/home/home.ts",
+    "app/pages/tabs/tabs.ts",
+    "app/providers/contact-provider/contact-provider.spec.ts",
+    "app/providers/contact-provider/contact-provider.ts",
+    "test/dependency-injection-handler.ts",
+    "test/mocks.ts",
+    "test/test-utils.ts"
+  ]
+}

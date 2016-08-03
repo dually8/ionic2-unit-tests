@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Contact
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>Follow us on Twitter</ion-list-header>
+    <ion-item *ngFor="let contact of contacts">
+      <ion-icon name="mail" item-left></ion-icon>
+      {{contact.name}}:  {{contact.email}}
+    </ion-item>
+  </ion-list>
+</ion-content>
