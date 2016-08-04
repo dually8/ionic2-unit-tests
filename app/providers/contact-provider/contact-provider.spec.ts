@@ -1,13 +1,15 @@
 import { beforeEach, beforeEachProviders, describe, expect, it, inject, injectAsync } from '@angular/core/testing';
 import {HTTP_PROVIDERS} from '@angular/http';
+import { providers } from '../../../test/common-providers';
 import { ContactProvider } from './contact-provider';
+
+let specProviders = [
+    ContactProvider
+];
 
 describe('Contact Provider', () => {
     let _cp: ContactProvider;
-    beforeEachProviders(() => [
-        HTTP_PROVIDERS,
-        ContactProvider
-    ]);
+    beforeEachProviders(() => providers.concat(specProviders));
 
     beforeEach(inject([ContactProvider], cp => {
         _cp = cp;
@@ -21,10 +23,10 @@ describe('Contact Provider', () => {
         expect(_cp.getContacts).toBeDefined();
     });
 
-    it('should return CJ', done => {
+    it('should return Mr. F', done => {
         _cp.getContacts()
             .then((res) => {
-                expect(res[0].name).toBe('CJ');
+                expect(res[0].name).toBe('Mr. F');
                 done();
             }).catch((err) => {
                 console.error('OH NO!');

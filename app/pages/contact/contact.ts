@@ -16,7 +16,6 @@ export class ContactPage {
     ) {
         this._contactProvider.getContacts()
             .then((res) => {
-                console.log('Got contacts from provider');
                 this.contacts = res;
             });
     }

@@ -29,6 +29,7 @@
     "app/pages/tabs/tabs.ts",
     "app/providers/contact-provider/contact-provider.spec.ts",
     "app/providers/contact-provider/contact-provider.ts",
+    "test/common-providers.ts",
     "test/dependency-injection-handler.ts",
     "test/mocks.ts",
     "test/test-utils.ts"

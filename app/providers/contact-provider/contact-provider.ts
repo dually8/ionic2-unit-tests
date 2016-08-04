@@ -21,12 +21,12 @@ export class ContactProvider {
   constructor(private http: Http) {
     this.contacts = [
         {
-            name: 'CJ',
-            email: 'cjcoffey@tva.gov'
+            name: 'Mr. F',
+            email: 'fake@email.com'
         },
         {
-            name: 'Shane',
-            email: 'sawright@tva.gov'
+            name: 'Snorlax',
+            email: 'zzz@pokemanz.com'
         }
     ];
   }
