@@ -1,4 +1,5 @@
 {
+  "version": "0.0.2",
   "dependencies": {
     "@angular/common": "2.0.0-rc.3",
     "@angular/compiler": "2.0.0-rc.3",
@@ -58,12 +59,9 @@
     }
   ],
   "scripts": {
-    "build": "gulp --gulpfile test/gulpfile.js --cwd ./ build-app",
-    "e2e": "gulp --gulpfile test/gulpfile.js --cwd ./ build-e2e && protractor test/protractor.conf.js",
-    "karma": "gulp --gulpfile test/gulpfile.js --cwd ./ karma-debug",
     "postinstall": "ionic state restore && typings install && webdriver-manager update && cp test/karma-static/*.html node_modules/karma/static",
     "start": "ionic serve",
-    "test": "gulp --gulpfile test/gulpfile.js --cwd ./ unit-test"
+    "test": "gulp unit-test"
   },
   "name": "unittestproject",
   "description": "UnitTestProject: An Ionic project"

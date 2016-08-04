@@ -1,5 +1,5 @@
 
-// IONIC:
+// Mock Providers for Ionic
 
 export class ConfigMock {
 

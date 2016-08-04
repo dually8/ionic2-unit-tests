@@ -72,3 +72,31 @@ gulp.task('clean', function(){
   return del('www/build');
 });
 gulp.task('lint', tslint);
+
+// My Tasks
+
+var runSequence = require('run-sequence');
+
+// run jasmine unit tests using karma with PhantomJS2 in single run mode
+gulp.task('karma', function (done) {
+
+  var karma = require('karma');
+  var karmaOpts = {
+    configFile: '' + process.cwd() + '/test/karma.conf.js',
+    singleRun: true,
+  };
+
+  new karma.Server(karmaOpts, done).start();
+});
+
+// build unit tests, run unit tests, remap and report coverage
+gulp.task('unit-test', function (done) {
+  // console.log("CWD: " + process.cwd());
+  runSequence(
+    ['clean'], // Ionic's clean task, nukes the whole of www/build
+    ['html'],
+    'karma',
+    (done)
+  );
+});
+
